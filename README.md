@@ -1,20 +1,34 @@
 # Document-based Chatbot with Data Analytics and Summarization
 
-MedBot is a chatbot that integrates a large language model (LLM) with retrieval-augmented generation (RAG) to ensure access to the latest knowledge in the medical domain.
+This project is focused on building a chatbot system that interacts with users by analyzing documents stored in Google Cloud Storage (GCS). The system searches relevant data based on user questions and utilizes a Large Language Model (LLM) for summarizing responses. In addition to chatbot functionalities, the project includes a data analytics component that tracks and analyzes user queries to generate insights.
 
 ## Project Structure
 
 - **`constants.py`**  
   This file initializes the embedding model and the LLM model.
 
-- **`vectorStore.py`**  
+- **`dataStorage.py`**  
+  This file is responsible for storing the PDF files as blob objects in Google Cloud Storage.
+
+- **`vectorStorage.py`**  
   This file handles the extraction of data from the provided documents and stores it in a vector database (Faiss).
 
-- **`medgpt.py`**  
-  This file is responsible for generating responses to user queries by using a LLM model with retrieval-augmented generation (RAG) to fetch the necessary context.
+- **`functions.py`**  
+  This file is composed of modules to create bucket in GCS, upload the documents to GCS, access blob objects from GCS, download blob from GCS and generate response for user queries.
 
-- **`server.py`**  
+- **`api.py`**  
+  This file has the endpoint for generating the response from extracted text from the PDF files.  
+
+- **`app.py`**  
   This file contains the code for the Streamlit application, serving as the front-end for the chatbot.
-  
-## Demo 
- ![Screenshot 2024-09-27 095925](https://github.com/user-attachments/assets/988c3aa9-ddb2-49df-b1cb-76fd3efe4925)
+
+## Google Cloud Storage
+ ![GCS_page](https://github.com/user-attachments/assets/cbbec1d6-5ecf-4182-b744-e82558da7cb0)
+
+## Postman API test
+![api_test](https://github.com/user-attachments/assets/8fa1daf4-1585-44ce-8255-d748aad5eeeb)
+
+## Demo
+ ![chat_page](https://github.com/user-attachments/assets/9e512cb1-db89-4427-92c0-1d04c4322f44)
+
+![report_page](https://github.com/user-attachments/assets/d05e45ba-aaa9-46ba-bdd7-ddc7abec4e5d)
