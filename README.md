@@ -22,6 +22,11 @@ This project is focused on building a chatbot system that interacts with users b
 - **`app.py`**  
   This file contains the code for the Streamlit application, serving as the front-end for the chatbot.
 
+## Project setup instructions
+- Have a Direcory *DataFiles* to store all the PDF files.
+- use the command **`python -m Streamlit run app.py`** to get the user interface (frontend).
+- Before running the above command run **`python api.py`** which starts the backend server for fetching the reponse.
+
 ## Google Cloud Storage
  ![GCS_page](https://github.com/user-attachments/assets/cbbec1d6-5ecf-4182-b744-e82558da7cb0)
 
